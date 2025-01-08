@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""  """
+""" 
+Module for the BaseModel class. 
+"""
 
 from models.base_model import BaseModel
 
