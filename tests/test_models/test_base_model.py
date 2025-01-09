@@ -23,9 +23,7 @@ class TestBasemodel(unittest.TestCase):
     def test_save(self):
         """
         Tests that the save method of a BaseModel instance updates the
-        updated_at attribute. It first checks that the instance has an
-        updated_at attribute, then calls the save method and checks that
-        the updated_at attribute has changed.
+        updated_at attribute. 
         """
         my_model = BaseModel()
         initial_updated_at = my_model.updated_at
