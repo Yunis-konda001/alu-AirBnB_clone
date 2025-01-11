@@ -5,10 +5,11 @@ This module contains the entry point of the command interpreter.
 
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
 
 # List of valid classes
-classes = {"BaseModel": BaseModel}
+classes = {"BaseModel": BaseModel, "User": User}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -37,8 +38,8 @@ class HBNBCommand(cmd.Cmd):
         if arg not in classes:
             print("** class doesn't exist **")
             return
-        new_instance = classes[arg]()
-        new_instance.save()
+        new_instance = eval(arg)()
+        storage.save()
         print(new_instance.id)
 
     def do_show(self, arg):
