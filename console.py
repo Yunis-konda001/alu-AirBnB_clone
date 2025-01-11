@@ -22,8 +22,8 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """Override the default behavior to do nothing on an empty line."""
-        pass
+        """Override the default behavior to do nothing on an empty line.
+        """
 
     def help_quit(self):
         """Help information for quit command."""
