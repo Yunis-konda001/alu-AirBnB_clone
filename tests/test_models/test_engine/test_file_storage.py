@@ -1,4 +1,51 @@
+""" This module contains the test cases for the FileStorage class. """
 
+import unittest
+import os
+import models
+from models.base_model import BaseModel
+from models.engine.file_storage import FileStorage
+
+class TestFileStorageInstantiation(unittest.TestCase):
+    """
+    Test class for testing the instantiation of the FileStorage class.
+    """
+
+    def test_file_storage_instantiation_no_args(self):
+        """
+        Test that FileStorage can be instantiated with no arguments
+        """
+        self.assertEqual(type(FileStorage()), FileStorage)
+
+    def test_file_torage_with_args(self):
+        """
+        Test that FileStorage cannot be instantiated with arguments
+        """
+        self.assertRaises(TypeError, FileStorage, None)
+
+    def test_storage_initializes(self):
+        """ Test that the storage variable in the models module is an instance
+        of the FileStorage class.
+        """
+
+        self.assertEqual(type(models.storage), FileStorage)
+
+class TestFileStorage(unittest.TestCase):
+    """
+    Test class for testing the FileStorage class.
+    """
+
+    def setUp(self):
+        """
+        Set up a test environment with a temporary file for testing file storage
+        """
+        self.test_file = "test_file.json"
+
+    def tearDown(self):
+        """
+        Clean up the test environment by removing the temporary file
+        """
+        if os.path.exists(self.test_file):
             os.remove(self.test_file)
 
     def test_all_storage_returns_dictionary(self):
