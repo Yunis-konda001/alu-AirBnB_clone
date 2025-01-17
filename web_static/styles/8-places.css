@@ -73,3 +73,34 @@
     line-height: 1.5;
     margin-top: 10px;
 }
+
+.information .max_guest {
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    background-image: url("../images/icon_group.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 25px;
+}
+
+.information .number_rooms {
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    background-image: url("../images/icon_bed.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 35px;
+}
+
+.information .number_bathrooms {
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    background-image: url("../images/icon_bath.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 35px;
+}
+
