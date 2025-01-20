@@ -3,8 +3,8 @@
 
 import cmd
 import re
-from models.base_model import BaseModel
 from shlex import split
+from models.base_model import BaseModel
 from models import storage
 from models.user import User
 from models.state import State
@@ -15,6 +15,7 @@ from models.place import Place
 
 
 def parse(arg):
+    """Parses a line of input into a list of arguments."""
     curly_braces = re.search(r"\{(.*?)\}", arg)
     brackets = re.search(r"\[(.*?)\]", arg)
     if curly_braces is None:
